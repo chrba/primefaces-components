@@ -1,7 +1,11 @@
 package de.morten.sample.jsf;
 
 
+
 import javax.ejb.Stateless;
+
+
+
 
 @Stateless
 public class Calculator{
@@ -10,3 +14,16 @@ public class Calculator{
         return x + y;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

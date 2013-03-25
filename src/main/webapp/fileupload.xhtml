@@ -1,28 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
-      
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:p="http://primefaces.org/ui">
+
 
 	<h:head>
-	
 	</h:head>
-
+	
 	<h:body>
-		<h:form enctype="multipart/form-data">
-		    <p:fileUpload fileUploadListener="#{fileUploadController.handleFileUpload}"
-		            mode="advanced" 
-		            update="messages"
-		            sizeLimit="100000" 
-		            allowTypes=".*"/>
+		<h:outputStylesheet library="css" name="style.css"  />
+		<div id="header" class="ui-widget ui-widget-header">GC Analysis a</div>
 		
-		    <p:growl id="messages" showDetail="true"/>
-	</h:form>
+			<div id="container">
+				<div class="column">
+					<div id="fileselect" class="ui-header">Select a file to upload</div>
+					<div id="fileupload">
+							<h:form id="fileUploadForm" >
+								<p:fileUpload fileUploadListener="#{fileUploadController.upload}"
+									allowTypes="/(\.|\/)(.*)$/" 
+									sizeLimit="100000" 
+									description="Select File"
+									auto="false"
+									update="messages"/>
+									
+									<p:growl id="messages" showDetail="true"/> 
+							</h:form>
+					</div>
+				</div>
+			</div>
 	</h:body>
-      
+	
+	<ui:debug hotkey="x" />
+
 </html>
