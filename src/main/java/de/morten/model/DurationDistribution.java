@@ -23,7 +23,7 @@ public class DurationDistribution {
 		for(final GCEvent gcEvent : events)
 		{
 			final GCTimeStats timeStats = gcEvent.getTimeStats();
-			final int duration = timeStats.getDuration();
+			final int duration = (int) Math.round(timeStats.getDuration()*100);
 			this.distribution.put(duration, incValueFor(duration));
 		}
 		this.name = name;

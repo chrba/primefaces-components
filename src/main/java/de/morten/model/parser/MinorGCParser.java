@@ -15,19 +15,24 @@ import de.morten.model.PSYoungGenGCEvent;
 public class MinorGCParser {
 
 	private final String line;
+	private final String[] split;
 	
 	public MinorGCParser(final String line)
 	{
 		this.line = line;
+		this.split = line.split("\\s");
+	}
+	
+	public boolean matches() {
+		return this.split.length > 3 && this.split[3].equals("[PSYoungGen:");
 	}
 	
 	public PSYoungGenGCEvent parse()
 	{
-		final String[] split = line.split("\\s");
 		
-		final GCTimeStats timeStats = parseTimeStats(split);
-		final GCMemStats youngGenChange = parseYoungGenChange(split);
-		final GCMemStats oldGenChange = parseOldGenChange(split);
+		final GCTimeStats timeStats = parseTimeStats(this.split);
+		final GCMemStats youngGenChange = parseYoungGenChange(this.split);
+		final GCMemStats oldGenChange = parseOldGenChange(this.split);
 		
 		final PSYoungGenGCEvent event = new PSYoungGenGCEvent(timeStats, youngGenChange, oldGenChange);
 		return event;
@@ -39,6 +44,7 @@ public class MinorGCParser {
 		return createMemStat(memStatStr.substring(0, memStatStr.length()-1));
 	}
 
+	
 	private  GCMemStats createMemStat(String memStat) {
 		// 19843K->2558K(38208K)
 		final String[] parts = memStat.split("->");

@@ -15,4 +15,9 @@ public abstract class  AbstractGCEvent implements GCEvent{
 	public GCTimeStats getTimeStats() {
 		return this.timeStats;
 	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
 }

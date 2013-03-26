@@ -16,8 +16,9 @@ body {
 
 #header {
 	height:80px;
-	padding-left:45%	
+	padding-left:43%	
 }
+
 
 
 #container {
@@ -26,7 +27,7 @@ body {
 
 #fileselect {
 	font-size:15pt;
-	margin-bottom:45px;
+	margin-bottom:35px;
 	margin-left:42%
 }
 #fileUpload {

@@ -16,7 +16,13 @@ public interface GCEvent {
 
 	/**
 	 * Timing statistics, e.g. how long did this gc event take, etc.
-	 * @return the statistics
+	 * @return the statistics, never null
 	 */
 	public GCTimeStats getTimeStats();
+	
+	/**
+	 * The name specifiyng the type of this event, e.g. FULL GC or PSYoungGen
+	 * @return the event name, never null
+	 */
+	public String getName();
 }
