@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:p="http://primefaces.org/ui">
+
+
+	<h:head>
+	</h:head>
+	
+	<h:body>
+		<h:outputStylesheet library="css" name="style.css"  />
+		<div id="header" class="ui-widget ui-widget-header"><h3>UberGCAnalyser</h3></div>
+		
+		<div id="chartContainer">
+			<p:lineChart id="linear" value="#{chartBean.linearModel}" legendPosition="e" animate="true" showMarkers="false" zoom="true"  
+	     		title="Linear Chart" minY="0" maxY="60" minX="0" style="height:300px" widgetVar="chart"/>  
+	  
+	  		<div id="resetZoomButton">
+				<p:commandButton type="button" value="Reset zoom" icon="ui-icon-cancel" onclick="chart.resetZoom()"/>  
+			</div>
+		</div>
+	</h:body>
+	
+</html>

@@ -11,6 +11,7 @@ import com.google.common.collect.Maps;
 import de.morten.model.GCEvent;
 
 
+
 public class GCParser {
 	
 	public Map<String, List<GCEvent>> parse(final BufferedReader reader) throws IOException

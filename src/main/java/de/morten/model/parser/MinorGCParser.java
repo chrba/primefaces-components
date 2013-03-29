@@ -24,12 +24,11 @@ public class MinorGCParser {
 	}
 	
 	public boolean matches() {
-		return this.split.length > 3 && this.split[3].equals("[PSYoungGen:");
+		return this.split.length == 13 && this.split[3].equals("[PSYoungGen:");
 	}
 	
 	public PSYoungGenGCEvent parse()
 	{
-		
 		final GCTimeStats timeStats = parseTimeStats(this.split);
 		final GCMemStats youngGenChange = parseYoungGenChange(this.split);
 		final GCMemStats oldGenChange = parseOldGenChange(this.split);

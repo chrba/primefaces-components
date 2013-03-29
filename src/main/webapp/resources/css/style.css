@@ -16,19 +16,19 @@ body {
 
 #header {
 	height:80px;
-	padding-left:43%	
+	padding-left:43%;
+	margin-bottom:100px;	
 }
 
 
 
 #container {
-	padding-top:100px;
 }
 
 #fileselect {
 	font-size:15pt;
-	margin-bottom:35px;
-	margin-left:42%
+	margin-bottom:20px;
+	margin-left:27%
 }
 #fileUpload {
 	margin-left:27%;
@@ -38,9 +38,35 @@ body {
 	width:700px;
 }
 
+#analyseResult {
+	margin-top:20px;
+}
+
 .column {
 }
 
 #rowspace {
 	margin-top:30px;	
+}
+
+
+
+
+
+#chartContainer {
+	margin-left:50px;
+	margin-right:50px;	
+}
+
+#resetZoomButton {
+	position:relative;
+	top:5px;
+}
+
+
+
+
+.ui-panel {
+	background-color:white;	
+}
 }
