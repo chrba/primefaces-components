@@ -3,7 +3,11 @@ body {
 	margin:0;
 	padding:0;
 	font-size:11pt;
-	color: #616161;
+	
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ 
+	
+	/*color: #616161*/;
 }
 
 .ui-widget, .ui-widget .ui-widget {
@@ -14,24 +18,10 @@ body {
 	top:30px;
 }
 
-#header {
-	height:80px;
-	padding-left:43%;
-	margin-bottom:100px;	
-}
 
 
 
-#container {
-}
-
-#fileselect {
-	font-size:15pt;
-	margin-bottom:20px;
-	margin-left:27%
-}
 #fileUpload {
-	margin-left:27%;
 	width:700px;
 }
 #fileUploadForm {
@@ -61,12 +51,4 @@ body {
 #resetZoomButton {
 	position:relative;
 	top:5px;
-}
-
-
-
-
-.ui-panel {
-	background-color:white;	
-}
 }

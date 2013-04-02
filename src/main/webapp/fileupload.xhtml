@@ -12,7 +12,7 @@ xmlns:p="http://primefaces.org/ui">
 	
 	<h:body>
 		<h:outputStylesheet library="css" name="style.css"  />
-		<div id="header" class="ui-widget ui-widget-header"><h3>UberGCAnalyser</h3></div>
+		<div id="header" class="ui-widget ui-widget-header"><h3 style="text-shadow: 0 1px 1px black;  font-weight: bold;">UberGCAnalyser</h3></div>
 		
 			<div id="container">
 				<div class="column">
@@ -20,9 +20,11 @@ xmlns:p="http://primefaces.org/ui">
 					<div id="fileselect" class="ui-header">Select one or more files to upload <br/>(or use drag &amp; drop)</div>
 					-->
 					
-					<div style="border:1px solid #5D6167;">
-						<div class="panelheader" style="background:#5D6167;"><span height:30px; style="color:white; text-shadow: 0 1px 1px black;">Select a file to upload</span></div>
-						<div id="fileupload">
+					<div style="border:1px solid #D9D9D9; width:750px; background-color:#F2F2F2;margin-top:20px;margin-left:50px;">
+						<div class="panelheader" style="background:#5D6167; height:30px;margin-bottom:10px;">
+							<span style="height:30px;color:white; text-shadow: 0 1px 1px black;">Select a file to upload</span>
+						</div>
+						<div id="fileupload" style="padding:20px;">
 								<h:form id="fileUploadForm" >
 									<p:fileUpload fileUploadListener="#{fileUploadController.upload}"
 										allowTypes="/(\.|\/)(.*)$/" 
