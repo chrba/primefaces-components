@@ -32,7 +32,6 @@ public class FileUploadController {
 	
     public void upload(FileUploadEvent event) {
     	try {
-    		System.out.println("helo");
 			final UploadedFile file = event.getFile();
 			final BufferedReader reader = new BufferedReader(new InputStreamReader(file.getInputstream()));
 			
