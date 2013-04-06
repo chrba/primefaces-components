@@ -10,9 +10,9 @@ xmlns:composite="http://java.sun.com/jsf/composite">
 
 	<composite:interface>
 		<composite:editableValueHolder name="text"></composite:editableValueHolder>
-		<!-- 
 		<composite:attribute name="width" />
 		<composite:attribute name="height" />
+		<!-- 
 		<composite:attribute name="style"/>
 		<composite:attribute name="styleClass"/>
 		-->
@@ -20,7 +20,7 @@ xmlns:composite="http://java.sun.com/jsf/composite">
 	
 	<composite:implementation>
 		<p:panel>
-			<h:inputTextarea  value="#{cc.attrs.text}" cols="30" rows="30">
+			<h:inputTextarea  value="#{cc.attrs.text}" cols="#{cc.attrs.width}" rows="#{cc.attrs.height}">
 				<f:ajax event="keyup" execute="@this" />
 			</h:inputTextarea>
 		</p:panel>
