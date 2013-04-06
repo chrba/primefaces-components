@@ -42,9 +42,7 @@ public class ChartBean implements Serializable {
         return linearModel;
     }
 
-   
-   
-  
+    
     public  void createLinearModel() {
     	this.linearModel = new CartesianChartModel();
     	final AnalyseResult result = chart.getResult();
