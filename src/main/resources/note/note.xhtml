@@ -8,21 +8,21 @@ xmlns:ui="http://java.sun.com/jsf/facelets"
 xmlns:p="http://primefaces.org/ui"
 xmlns:composite="http://java.sun.com/jsf/composite">
 
+
+	
 	<composite:interface>
-		<composite:editableValueHolder name="text"></composite:editableValueHolder>
+		<composite:editableValueHolder name="text" targets="inputarea"></composite:editableValueHolder>
 		<composite:attribute name="width" />
 		<composite:attribute name="height" />
-		<!-- 
-		<composite:attribute name="style"/>
-		<composite:attribute name="styleClass"/>
-		-->
 	</composite:interface>
 	
+	
 	<composite:implementation>
-		<p:panel>
-			<h:inputTextarea  value="#{cc.attrs.text}" cols="#{cc.attrs.width}" rows="#{cc.attrs.height}">
-				<f:ajax event="keyup" execute="@this" />
-			</h:inputTextarea>
-		</p:panel>
+			<h:outputStylesheet library="css" name="ccnote.css"  />
+			<p:panel header="Note" showDetails="true" >
+				<h:inputTextarea   id="inputarea" styleClass="ccnote" value="#{cc.attrs.text}" style="width:100%;height:100%;"  >
+					<f:ajax event="keyup" execute="@this" />
+				</h:inputTextarea>
+			</p:panel>
 	</composite:implementation>
 </html>
