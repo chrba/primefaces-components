@@ -25,7 +25,7 @@
    <build>
 		<resources>
 			<resource>
-				<directory>src/main/resources</directory>
+				<directory>src/main/webapp/resources</directory>
 				<targetPath>META-INF/resources</targetPath>
 			</resource>
 
