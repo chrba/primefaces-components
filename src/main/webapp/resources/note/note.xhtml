@@ -76,9 +76,8 @@ xmlns:composite="http://java.sun.com/jsf/composite">
 				});
 			</script>
 		
-			<div  class="m-note-panel" >
 
-				<p:panel id="ccnote" header="#{cc.attrs.header}" showDetails="true" >
+				<p:panel id="ccnote" styleClass="m-note-panel" header="#{cc.attrs.header}" showDetails="true" >
 					<h:outputText styleClass="m-note-statustext" id="statustext" />
 				
 					<h:inputTextarea  onkeydown="de.morton.saveNoteText(this, event)"  id="inputarea" styleClass="m-note-inputtextarea"  value="#{cc.attrs.text}" 
@@ -117,8 +116,6 @@ xmlns:composite="http://java.sun.com/jsf/composite">
 			        </f:facet>
 				</p:panel>
 				
-			</div>
-			
 
 	</composite:implementation>
 </html>
